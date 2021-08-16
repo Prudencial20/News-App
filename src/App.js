@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.css";
+// import "react-bootstrap-carousel/
+import Home from './Pages/Home'
+import SignIn from './Pages/SignIn'
+// import Sports from './Pages/Sports';
+import Politics from './Pages/Politics'
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <Switch>
+        <Route path='/' exact>
+          <Home />
+        </Route>
+        <Route path='/politics'>
+          <Politics />
+        </Route>
+        <Route path='/signIn'>
+        <SignIn />
+        </Route>
+      </Switch>
+
   );
 }
 
