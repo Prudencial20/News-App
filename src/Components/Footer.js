@@ -47,12 +47,12 @@ export default function Footer() {
                 <section>
                 <div className="footer-socials">
                     <h5 className="tags-div">Tags</h5>
-                    <strong><hr></hr></strong>
+                    <strong><hr className="footer-lines"></hr></strong>
                 </div>
                 <div className="tags-text">
                      <p>Football</p>
                     <p>Cricket</p>
-                    <p>C0vid 19</p>
+                    <p>Covid 19</p>
                     <p>Life Style</p>
                     </div>
                 <div className="tags-text">
@@ -72,7 +72,7 @@ export default function Footer() {
                 <section>
                 <div className="contact-us">
                     <h5 className="tags-div">Stay in Touch</h5>
-                    <strong><hr></hr></strong>
+                    <strong><hr className="footer-lines"></hr></strong>
                 </div>
                 <div className="tags-text-one">
                     <h5>To be updated with all the latest news,  <br></br> offers and special announcements</h5>

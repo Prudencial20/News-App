@@ -9,25 +9,29 @@ import Footer from '../Components/Footer';
 
  
  export default function Politics() {
-    
+         const d = new Date();
 
      return (
          <main>
             <Header /> 
 
             <div className="label">
+                  <img style={{width: "20px", paddingLeft: "100px"}} src={process.env.PUBLIC_URL  + '/Calender.png'} alt="..."/>
+                  <p>{d.toLocaleTimeString()}</p>
+                  <p>{d.toDateString()}</p>
                   <p className="breaking-news">Breaking News</p>
                   <p>Indonesian says located black box recorders from crashed plane.</p>
                   <p>We'll deploy more resources to other sectors in 2022 -Okowa</p>
 
                   <Link to='./signin' className="nav-signin">Admin Sign In</Link>
+                  <i style={{ marginTop: "-15px"}} class="fas fa-search"></i>
               </div>
                 <div className="politics-header">
                     <p>We'll deploy more resources to other sectors in 2022 -Okowa</p>
                 </div>
                 <div>
                    <img src={Deploy} alt=""/> 
-                   <blockquote className="paragraph-one"> Jonah Ejike 1h ago</blockquote>
+                <bold><blockquote className="paragraph-one"> Jonah Ejike 1h ago</blockquote></bold>
                   <p className="paragraph-two"> Delta Governor, Sen. (Dr) Ifeanyi Okowa, on Friday, said every sector of the state economy would receive attention within the limit of available resources in 2022.<br/> <br/>
 
 Okowa made the disclosure while inaugurating Omene Road, Lawrence/Iju Road and Laboard Road all in Sapele as well as Hon. Onosa Road, Jesse and Sargin Erhivieta/Mission Road Jesse, in Sapele and Ethiope West Local Government Areas of the state.<br/> <br/>
@@ -61,13 +65,13 @@ Unfortunately, he was only able to commission one of them before he left office 
                  <p> Related Topics</p>
                 </div>
                 <div className="images-small">
-                    <img src={Proud1} alt=""/>
+                    <img src={Proud1} class="d-block w-100" alt=""/>
                 </div>
                 <div className="politics-header">
                     <p>Okowa wants Proper Monitoring of Nigeria's Crude Oil</p>
                 </div>
                 <div>
-                    <img src={Proud2} alt=""/>
+                    <img src={Proud2} class="d-block w-100" alt=""/>
                 </div>
                 <div className="politics-header">
                     <p>Gov.Okowa Congratulates Omo-Agege at 58</p>
@@ -101,7 +105,7 @@ Unfortunately, he was only able to commission one of them before he left office 
                 <img  src={process.env.PUBLIC_URL  + '/Group 533.png'} class="d-block w-100" alt="..."/>
                 </div>
                 <div>
-                <h5> Opretha Oghale  .︁ 2 hours ago</h5>
+                <h5> Jeremiah Itom  .︁ 2 hours ago</h5>
                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra magnis enim ac interdum leo tellus. Diam feugiat rhoncus, placerat suspendisse <br/> faucibus. Nulla scelerisque convallis ut lectus vitae tempus ultrices libero. Dot amet espiliere dotre tellius lorem ipsum sit amet dols lorders vitae.</p>
                 </div>
             </section>
@@ -110,7 +114,7 @@ Unfortunately, he was only able to commission one of them before he left office 
                 <img  src={process.env.PUBLIC_URL  + '/Group 533.png'} class="d-block w-100" alt="..."/>
                 </div>
                 <div>
-                <h5> Opretha Oghale .︁ 2 hours ago</h5>
+                <h5> Prudence Eki .︁ 2 hours ago</h5>
                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra magnis enim ac interdum leo tellus. Diam feugiat rhoncus, placerat suspendisse <br/> faucibus. Nulla scelerisque convallis ut lectus vitae tempus ultrices libero. Dot amet espiliere dotre tellius lorem ipsum sit amet dols lorders vitae.</p>
                 </div>
             </section>

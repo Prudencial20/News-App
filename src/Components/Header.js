@@ -1,6 +1,6 @@
  import React from 'react'
  import { Link } from 'react-router-dom'
- import LOGO from '../NewsApp Props/LOGO.png'
+ import Logo3 from '../NewsApp Props/Logo3.png'
  import playstore from '../NewsApp Props/playstore.png'
  
  function Header() {
@@ -10,7 +10,7 @@
                 
                <div className="nav-items">
                     <div className="logo">
-                       <img src={LOGO} alt=""/>
+                       <img style={{width: "200px"}} src={Logo3} alt=""/>
                     </div>
                    <Link to='./' className="nav-buttons">Home</Link>
                    <Link to='./politics' className="nav-buttons">Politics</Link>

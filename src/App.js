@@ -6,12 +6,12 @@ import Home from './Pages/Home'
 import SignIn from './Pages/SignIn'
 // import Sports from './Pages/Sports';
 import Politics from './Pages/Politics'
-
-
+import Dashboard from './Components/Dashboard'
 
 
 function App() {
   return (
+    <>
     
       <Switch>
         <Route path='/' exact>
@@ -23,8 +23,11 @@ function App() {
         <Route path='/signIn'>
         <SignIn />
         </Route>
+        <Route path='/dashboard'>
+        <Dashboard />
+        </Route>
       </Switch>
-
+</>
   );
 }
 

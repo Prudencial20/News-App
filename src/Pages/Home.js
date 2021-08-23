@@ -11,33 +11,38 @@ import Footer from '../Components/Footer';
  
  export default function Home() {
      const d = new Date();
+      
+     
      return (
          <main>
           <div>
               <Header />
               <div className="label">
-                  <p>{d.toDateString}</p>
+                  <img  style={{width: "20px"}} src={process.env.PUBLIC_URL  + '/Calender.png'}  alt="..."/>
+                  <p>{d.toLocaleTimeString()}</p>
+                  <p>{d.toDateString()}</p>
                   <p className="breaking-news">Breaking News</p>
                   <p>Indonesian says located black box recorders from crashed plane.</p>
                   <p>We'll deploy more resources to other sectors in 2022 -Okowa</p>
                   <Link to='./signin' className="nav-signin">Admin Sign In</Link>
+                  <i style={{ marginTop: "-15px"}} class="fas fa-search"></i>
               </div>
               <div>
               <div id="carousel-div" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" style={{height: "10px", borderRadius: "5px"}} data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" style={{height: "10px", borderRadius: "5px"}} data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" style={{height: "10px", borderRadius: "5px"}} data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
+                    <img src={process.env.PUBLIC_URL  + '/Frontend.png'} class="d-block w-100" alt="..."/>
+                    </div>
+                    <div class="carousel-item">
                     <img src={process.env.PUBLIC_URL  + '/After.png'} class="d-block w-100" alt="..."/>
                     </div>
                     <div class="carousel-item">
-                    <img src={process.env.PUBLIC_URL  + '/Before.png'} class="d-block w-100" alt="..."/>
-                    </div>
-                    <div class="carousel-item">
-                    <img src={process.env.PUBLIC_URL  + '/Apee.png'} class="d-block w-100" alt="..."/>
+                    <img src={process.env.PUBLIC_URL  + '/Amanda1.png'} class="d-block w-100" alt="..."/>
                     </div>
                     <div className="carousel-caption">
                         <p className="carousel-p">Craig Bator - 27 June 2021</p>
@@ -54,7 +59,11 @@ import Footer from '../Components/Footer';
             </button>
             </div>
             </div>
-                <Carousel />
+
+
+
+
+                
            </div>
            <div className="home-paragraph">
                <p>Politics</p>
