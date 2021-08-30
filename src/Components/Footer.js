@@ -52,7 +52,7 @@ export default function Footer() {
                 <div className="tags-text">
                      <p>Football</p>
                     <p>Cricket</p>
-                    <p>Covid 19</p>
+                    <p>Covid-19</p>
                     <p>Life Style</p>
                     </div>
                 <div className="tags-text">

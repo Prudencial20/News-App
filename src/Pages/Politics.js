@@ -15,17 +15,16 @@ import Footer from '../Components/Footer';
          <main>
             <Header /> 
 
-            <div className="label">
-                  <img style={{width: "20px", paddingLeft: "100px"}} src={process.env.PUBLIC_URL  + '/Calender.png'} alt="..."/>
-                  <p>{d.toLocaleTimeString()}</p>
-                  <p>{d.toDateString()}</p>
-                  <p className="breaking-news">Breaking News</p>
-                  <p>Indonesian says located black box recorders from crashed plane.</p>
-                  <p>We'll deploy more resources to other sectors in 2022 -Okowa</p>
-
-                  <Link to='./signin' className="nav-signin">Admin Sign In</Link>
-                  <i style={{ marginTop: "-15px"}} class="fas fa-search"></i>
-              </div>
+                    <div className="label">
+                        <img  style={{width: "20px"}} src={process.env.PUBLIC_URL  + '/Calender.png'}  alt="..."/>
+                        <p>{d.toLocaleTimeString()}</p>
+                        <p>{d.toDateString()}</p>
+                        <p className="breaking-news">Breaking News</p>
+                        <p>Indonesian says located black box recorders from crashed plane.</p>
+                        <p>We'll deploy more resources to other sectors in 2022 -Okowa</p>
+                        <Link to='./signin' className="nav-signin">Admin Sign In</Link>
+                        <i style={{ marginTop: "-15px"}} class="fas fa-search"></i>
+                    </div>
                 <div className="politics-header">
                     <p>We'll deploy more resources to other sectors in 2022 -Okowa</p>
                 </div>

@@ -1,57 +1,68 @@
 import React from 'react'
 import Logo3 from '../NewsApp Props/Logo3.png'
-import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useState  } from 'react'
+import { useHistory } from 'react-router-dom'
+import axios from 'axios'
 
 
 export default function SignIn() {
 
-        //  const [username, setUserName] = useState();
-        //  const [password, setPassword] = useState();
+  const [ user, setUser] = useState('');
+  const History = useHistory()      
+         const [username, setUserName] = useState();
+         const [password, setPassword] = useState();
 
-        // onChange={e => setUserName(e.target.value)}
-        // onChange={e => setPassword(e.target.value)} 
-        // onClick={handleSubmit}
+       
 
-        //  const handleSubmit = async e => {
-        //    e.preventDefault();
-        //    const admin = { username , password}
+         const handleSubmit = async e => {
+           e.preventDefault();
+           const admin = { username , password}
+           console.log(admin);
 
-        //    fetch('https://backend-news-app-api.herokuapp.com/api/admin/login', {
-        //   method: 'POST',
-        //   headers: {
-        //     'Content-Type': 'application/json'
-        //   },
-        //   body: JSON.stringify(admin)
-        // })
-        //   .then(data => data.json())
-        // console.log('logged in')
-        //  }
+           axios.post('https://backend-news-app-api.herokuapp.com/api/admin/login', {
+            username,
+            password,
+
+          })
+          .then((res) => {
+            console.log('You are logged In')
+            setUser(user)
+            History.push("/dash")
+          })
+          .catch( err => {
+            // alert('Enter Correct Login Details')
+                console.log(err)
+          });
+
+         }
     return (
         <div className="admin-container">
-        <div className="singin-logo">
-        <img style={{ marginLeft:"400px", height: "80px" }} src={Logo3} alt=""/>
-        </div>
+          <div className="singin-logo">
+          <img style={{ marginLeft:"400px", height: "80px" }} src={Logo3} alt=""/>
+          </div>
         <section className='signin-main'>
-           
+        
+        
+        
 
-            <div  className="signin-container">
-            <h1>Welcome Back</h1>
-            <p className="p-tag">Enter your Admin Details</p>
-            <div>
+                <div  className="signin-container">
+                      <h1>Welcome Back</h1>
+                      <p className="p-tag">Enter your Admin Details</p>
+                      <div>
+                          
+                      </div>
+                      <input type= "text" onChange={e => setUserName(e.target.value)} placeholder="&#x1f464; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; enter your username" 
+                      className="signin-input" require/>
+                      <input type="password"  onChange={e => setPassword(e.target.value)}  placeholder="&#x1f512; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; Enter your password"className="signin-input" required />
+                       <button onClick={handleSubmit} className="signin-botn">Sign In</button>
+                      </div>
+                      </section>
+                      <div className="reset-password">
+                      <p className="forgot-password">Forgot your Password?</p>
+                      <p>Contact your Support Centre</p>
+                      </div>
                 
-            </div>
-            <input type= "text"  placeholder="&#x1f464; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; enter your username" className="signin-input"/>
-            <input type="password"   placeholder="&#x1f512; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; Enter your password"className="signin-input" />
-            <Link to='./dashboard'><button className="signin-botn">Sign In</button></Link>
-            </div>
-            </section>
-            <div className="reset-password">
-            <p className="forgot-password">Forgot your Password?</p>
-            <p>Contact your Support Centre</p>
-            </div>
-            
-            </div>
+                </div>
 
     )
 }

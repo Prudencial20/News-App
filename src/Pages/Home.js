@@ -39,10 +39,10 @@ import Footer from '../Components/Footer';
                     <img src={process.env.PUBLIC_URL  + '/Frontend.png'} class="d-block w-100" alt="..."/>
                     </div>
                     <div class="carousel-item">
-                    <img src={process.env.PUBLIC_URL  + '/After.png'} class="d-block w-100" alt="..."/>
+                    <img src={process.env.PUBLIC_URL  + '/Deploy.png'} class="d-block w-100" alt="..."/>
                     </div>
                     <div class="carousel-item">
-                    <img src={process.env.PUBLIC_URL  + '/Amanda1.png'} class="d-block w-100" alt="..."/>
+                    <img src={process.env.PUBLIC_URL  + '/After.png'} class="d-block w-100" alt="..."/>
                     </div>
                     <div className="carousel-caption">
                         <p className="carousel-p">Craig Bator - 27 June 2021</p>
@@ -137,7 +137,7 @@ import Footer from '../Components/Footer';
                 <div className="card-img">
                 <div class="card mb-3" style={{width: '400px'}}>
             <div class="row g-0 row--container">
-                <div class="col-md-4">
+                <div class="col-md-4"> 
                 <img className="under-images" src={process.env.PUBLIC_URL  + '/card1.jpg'} class="d-block w-100" alt="..."/>
                 </div>
                 <div class="col-md-8">
@@ -246,7 +246,7 @@ import Footer from '../Components/Footer';
             </div>
             <div>
             <img src={process.env.PUBLIC_URL  + '/Medal.png'} class="d-block w-100 medal--image" alt="..."/>
-            <p className="img-paragraph-sports">Ogheneobukome emerges best student in Delta State <br/> on March 2nd, 2021.</p>
+            <p className="img-paragraph-sports">Tokyo Olympics: Guide to track cycling</p>
             </div>
             <section className="under-img">
                 <div className="card-img">
