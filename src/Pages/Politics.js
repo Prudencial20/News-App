@@ -22,8 +22,9 @@ import Footer from '../Components/Footer';
                         <p className="breaking-news">Breaking News</p>
                         <p>Indonesian says located black box recorders from crashed plane.</p>
                         <p>We'll deploy more resources to other sectors in 2022 -Okowa</p>
-                        <Link to='./signin' className="nav-signin">Admin Sign In</Link>
-                        <i style={{ marginTop: "-15px"}} class="fas fa-search"></i>
+                        <Link to='./signin' style={{marginTop:"5px", fontSize:"20px", fontWeight:"700px,"}}  className="nav-signin">Admin Sign In</Link>
+                        <img  style={{ marginTop: "10px",width: "auto", height:"40px"}}  src={process.env.PUBLIC_URL  + '/Search.png'}  alt="..."/>
+                        {/* <i style={{ marginTop: "-15px"}} class="fas fa-search"></i> */}
                     </div>
                 <div className="politics-header">
                     <p>We'll deploy more resources to other sectors in 2022 -Okowa</p>

@@ -42,7 +42,7 @@ export default function SignIn() {
     return (
         <div className="admin-container">
           <div className="singin-logo">
-          <img style={{ marginLeft:"400px", height: "70px" }} src={Logo3} alt=""/>
+          <img  src={Logo3} alt=""/>
           </div>
         <section className='signin-main'>
         

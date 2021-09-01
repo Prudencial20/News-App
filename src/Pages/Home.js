@@ -24,8 +24,10 @@ import Footer from '../Components/Footer';
                         <p className="breaking-news">Breaking News</p>
                         <p>Indonesian says located black box recorders from crashed plane.</p>
                         <p>We'll deploy more resources to other sectors in 2022 -Okowa</p>
-                        <Link to='./signin'style={{marginTop:"5px", fontSize:"18px", fontWeight:"600px,"}} className="nav-signin">Admin Sign In</Link>
-                        <i style={{ marginTop: "10px",width:"40px", height:"20px"}} class="fas fa-search"></i>
+                        <Link to='./signin'style={{marginTop:"5px", fontSize:"20px", fontWeight:"900px,"}} className="nav-signin">Admin Sign In</Link>
+                        <img  style={{ marginTop: "10px",width: "auto", height:"40px"}}  src={process.env.PUBLIC_URL  + '/Search.png'}  alt="..."/>
+                        {/* <i sclass="fas fa-search"></i> */}
+                    
                     </div>
                     <div>
                             <div id="carousel-div" class="carousel slide" data-bs-ride="carousel">
@@ -36,13 +38,13 @@ import Footer from '../Components/Footer';
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                    <img src={process.env.PUBLIC_URL  + '/Frontend.png'} class="d-block w-100" alt="..."/>
+                                    <img src={process.env.PUBLIC_URL  + '/Frontend.png'} class="d-block " alt="..."/>
                                     </div>
                                     <div class="carousel-item">
-                                    <img src={process.env.PUBLIC_URL  + '/Deploy.png'} class="d-block w-100" alt="..."/>
+                                    <img src={process.env.PUBLIC_URL  + '/Deploy.png'} class="d-block " alt="..."/>
                                     </div>
                                     <div class="carousel-item">
-                                    <img src={process.env.PUBLIC_URL  + '/After.png'} class="d-block w-100" alt="..."/>
+                                    <img src={process.env.PUBLIC_URL  + '/After.png'} class="d-block " alt="..."/>
                                     </div>
                                     <div className="carousel-caption">
                                         <p className="carousel-p">Craig Bator - 27 June 2021</p>
