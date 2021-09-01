@@ -8,9 +8,11 @@ import { FormControlLabel } from '@material-ui/core';
 import { FormLabel } from '@material-ui/core';
 import { Radio } from '@material-ui/core';
 import { useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 
 export default function Dash() {
+    const History = useHistory()
             const [title, setTitle] = useState('');
             const [caption, setCaption] = useState('');
             const [body, setBody] = useState('');
@@ -54,7 +56,14 @@ export default function Dash() {
                .catch( err => {
                      console.log(err)
                });
-            }
+              
+            };
+            const handleClick = async e =>{
+                   e.preventDefault();
+                   localStorage.removeItem('user');
+                   History.push("/signIn")
+                   console.log('user')
+               }
     return (
         <div>
            <main className="main-container">
@@ -86,7 +95,7 @@ export default function Dash() {
                     </div>
                 <div> 
                     <input type="search" className="dash-input" placeholder= "Search" />
-                    <button className="input-btn">X</button>
+                    <button onClick={handleClick} className="input-btn">X</button>
                 </div>
             </div>
             <div style={{marginLeft: "-100px"}} className="dash-button">
