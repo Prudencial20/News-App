@@ -19,14 +19,18 @@ export default function SignIn() {
            const admin = { username , password}
            console.log(admin);
 
+          
+
            axios.post('https://backend-news-app-api.herokuapp.com/api/admin/login', {
             username,
             password,
 
           })
           .then((res) => {
-            console.log('You are logged In')
-            setUser(user)
+            let adminPayload = res.data.data;
+            console.log('You are logged In', adminPayload)
+            setUser(adminPayload)
+            window.localStorage.setItem('admin', JSON.stringify(adminPayload));
             History.push("/dash")
           })
           .catch( err => {
@@ -38,7 +42,7 @@ export default function SignIn() {
     return (
         <div className="admin-container">
           <div className="singin-logo">
-          <img style={{ marginLeft:"400px", height: "80px" }} src={Logo3} alt=""/>
+          <img style={{ marginLeft:"400px", height: "70px" }} src={Logo3} alt=""/>
           </div>
         <section className='signin-main'>
         

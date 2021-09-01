@@ -11,37 +11,49 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 export default function Dash() {
-            const [title, setTitle] = useState();
-            const [caption, setCaption] = useState();
-            const [body, setBody] = useState();
-            const [writer, setWriter] = useState();
-            const [images, setImages] = useState();
-            const [tags, setTags] = useState();
-            const [category, setCategory] = useState();
+            const [title, setTitle] = useState('');
+            const [caption, setCaption] = useState('');
+            const [body, setBody] = useState('');
+            const [writer, setWriter] = useState('');
+            const [images, setImages] = useState('');
+            const [tags, setTags] = useState('');
+            const [category, setCategory] = useState('');
+            // const [image_Url, setImage_Url] = useState('');
+
+
+            const hanleImage  = (e) => {
+                console.log(e.target.files[0]) 
+
+                setImages(e.target.files[0])
+                // setImage_Url(e.target.files[0])
+            }
 
             const handleSubmit = async e => {
+               
                 e.preventDefault();
-                const adminPost = { title, writer, caption, body, images, tags, category}
-                console.log(adminPost);
+           let admin =  JSON.parse(localStorage.getItem('admin'))
+                
+                let formdata = new FormData();
+                formdata.append("title", title);
+                formdata.append("caption", caption);
+                formdata.append("images", images);                                                                                                                            
+                formdata.append("body", body);
+                formdata.append("tags", tags); 
+                formdata.append("writer", writer);
+                formdata.append("category", category);
      
-            //     axios.post('https://backend-news-app-api.herokuapp.com/api/stories', {
-            //      title,
-            //      caption,
-            //      body,
-            //      images,
-            //      tags,
-            //      category,
-            //      writer,
+                axios.post('https://backend-news-app-api.herokuapp.com/api/stories', 
+                formdata,
+                { headers: {"Authorization" : `Bearer ${admin.token}`} },
      
-            //    })
-            //    .then((res) => {
-            //      console.log('successful')
-            //     //  setUser(true)
-            //    })
-            //    .catch( err => {
-            //      alert('err')
-            //          console.log(err)
-            //    });
+               )
+               .then((res) => {
+                 console.log('successful', res)
+                //  setUser(true)
+               })
+               .catch( err => {
+                     console.log(err)
+               });
             }
     return (
         <div>
@@ -112,7 +124,7 @@ export default function Dash() {
                     </FormControl>
                     </div>
                     <bold><h6 onChange={e => setTags(e.target.value)}>Tags</h6></bold>
-                    <input></input> <button>Add</button>
+                    <input></input> <button className="dash-button-two">Add</button>
                     <bold><h6>Post Date</h6></bold>
                     <input type="text" placeholder="08/10/2021  &nbsp; &nbsp; &#x1f4c5;" /> <input type="text" placeholder="18:00  &nbsp; &nbsp; &#x1f553;"/>
                 </div>
@@ -121,7 +133,7 @@ export default function Dash() {
                 <div className="dash-upload">
                     <div className="upload-div">
                         <p for="Uplaod Image*">Upload Image*</p>
-                        <input value={images} onChange={e => setImages(e.target.files[0])} className="upload" type="file" name="Upload"/>
+                        <input  onChange={hanleImage} className="upload" type="file" name="Upload"/>
                         
                     </div>
          <div className="upload-div">

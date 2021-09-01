@@ -70,7 +70,7 @@ Unfortunately, he was only able to commission one of them before he left office 
                     <p>Okowa wants Proper Monitoring of Nigeria's Crude Oil</p>
                 </div>
                 <div>
-                    <img src={Proud2} class="d-block w-100" alt=""/>
+                    <img style={{marginRight: "40px", width: "90%"}} src={Proud2} alt=""/>
                 </div>
                 <div className="politics-header">
                     <p>Gov.Okowa Congratulates Omo-Agege at 58</p>
@@ -91,13 +91,11 @@ Unfortunately, he was only able to commission one of them before he left office 
                 </div>
             </section>
             <section className="comment-section">
-                <div>
+                {/* <div>
                 <img className="comment-section-one" src={process.env.PUBLIC_URL  + '/Group 533.png'} class="d-block w-100" alt="..."/>
-                </div>
-                <div className="comment-texts">
-                <h5> Opretha Oghale .︁ 2 hours ago</h5>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra magnis enim ac interdum leo tellus. Diam feugiat rhoncus, placerat suspendisse <br/> faucibus. Nulla scelerisque convallis ut lectus vitae tempus ultrices libero. Dot amet espiliere dotre tellius lorem ipsum sit amet dols lorders vitae.</p>
-                </div>
+                </div> */}
+                {/* <div className="comment-texts"> */}
+        
             </section>
             <section className="comment-section">
                 <div>

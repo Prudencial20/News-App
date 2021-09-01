@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
  import axios from 'axios';
  import Header from '../Components/Header'
  import News from '../Components/News'
+ import Footer from '../Components/Footer';
 
 export default function Science() {
     const d = new Date();
@@ -39,6 +40,33 @@ export default function Science() {
 
                  )) 
              }
+
+              <div className="politics-header">
+                    <p>Comment</p>
+                </div>
+                <div>
+                    <textarea className="comment-div"></textarea> 
+                </div>
+
+            <section className="comment-section">
+                <div>
+                <img  src={process.env.PUBLIC_URL  + '/Group 533.png'} class="d-block w-100" alt="..."/>
+                </div>
+                <div>
+                    <button className="comment-btn"> Post Comment</button>
+                </div>
+            </section>
+            <section className="comment-section">
+                <div>
+                <img className="comment-section-one" src={process.env.PUBLIC_URL  + '/Group 533.png'} class="d-block w-100" alt="..."/>
+                </div>
+                <div className="comment-texts">
+                <h5> Opretha Oghale .︁ 2 hours ago</h5>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra magnis enim ac interdum leo tellus. Diam feugiat rhoncus, placerat suspendisse <br/> faucibus. Nulla scelerisque convallis ut lectus vitae tempus ultrices libero. Dot amet espiliere dotre tellius lorem ipsum sit amet dols lorders vitae.</p>
+                </div>
+                </section>
+                
+             <Footer />
         </main>
     )
 }

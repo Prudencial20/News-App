@@ -10,7 +10,7 @@
                 
                <div className="nav-items">
                     <div className="logo">
-                       <img style={{width: "200px"}} src={Logo3} alt=""/>
+                       <img style={{width: "200px", marginLeft:'100px'}} src={Logo3} alt=""/>
                     </div>
                    <Link to='./' className="nav-buttons">Home</Link>
                    <Link to='./politics' className="nav-buttons">Politics</Link>

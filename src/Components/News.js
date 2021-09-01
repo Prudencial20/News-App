@@ -11,14 +11,16 @@ export default function News({news}) {
            
 
                 <div className="home-paragraph-sports">
-                    <p>{news.title}</p> 
+                    <p style={{fontSize: "30px",  fontWeight: "600", marginLeft: "40px", marginTop: "15px", color: "white", borderRadius: "5px", padding: "10px"}}>{news.title}</p> 
                 </div>
-                <div><img src={news.imageUrl}/> </div>
+                <div style={{width: "1200px", height: "500px", borderRadius: "4px"}}>
+                    <img src={news.imageUrl}/> 
+              </div>
                <div>
-               <h3>{news.tags}</h3>
-               <bold><blockquote className="paragraph-one">{news.caption}</blockquote></bold>
+               <h5 style={{marginLeft: "40px"}}>{news.tags}</h5>
+               <bold><blockquote  style={{fontSize: "20px", fontWeight: "600"}} className="paragraph-one">{news.caption}</blockquote></bold>
               <p className="paragraph-two">{news.body}</p>
-              <h1 className="paragraph-two">{news.writer}</h1>
+              <h5 className="paragraph-two">{news.writer}</h5>
               <p>{news.comment}</p>
               
             </div>
