@@ -11,7 +11,7 @@ export default function Science() {
     const [ science, setScience ] = useState([]);
 
   useEffect(() => {
-        axios.get('https://backend-news-app-api.herokuapp.com/api/stories/category/science&tech')
+        axios.get('https://backend-news-app-api.herokuapp.com/api/stories/category/science & tech')
         .then((res)  => {
             console.log(res.data.data)
             setScience(res.data.data)

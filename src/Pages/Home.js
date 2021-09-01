@@ -110,7 +110,7 @@ import Footer from '../Components/Footer';
                 <div class="card mb-3" style={{width: '400px'}}>
             <div class="row g-0 row--container">
                 <div class="col-md-4">
-                <img className="under-images" src={process.env.PUBLIC_URL  + '/Health.png'} class="d-block w-100" alt="..."/>
+                <img className="under-images" src={process.env.PUBLIC_URL  + '/Health.png'} class="d-block" alt="..."/>
                 </div>
                 <div class="col-md-8">
                 <div class="card-body">
